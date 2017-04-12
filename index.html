@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poker Session Tracker</title>
+</head>
+<body>
+  Don't be a degen. <br /><br />
+
+<!-- <input id="date" name="date">
+
+<script type="text/javascript">
+  document.getElementById('date').value = Date();
+</script> -->
+
+  <form action="/sessionAdd" method="POST">
+
+  	<input id="date" name="date">
+
+	<script type="text/javascript">
+ 		 document.getElementById('date').value = Date();
+	</script>
+
+
+  	<input type="text" placeholder="stakes" name="stakes">
+  	<input type="text" placeholder="Net Profit" name="netProfit">
+  	<input type="text" placeholder="Casino" name="casino">
+  	<button type="submit">Submit</button>
+  </form>
+</body>
+</html>
