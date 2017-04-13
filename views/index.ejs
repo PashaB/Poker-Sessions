@@ -5,15 +5,20 @@
   <title>Poker Session Tracker</title>
 </head>
 <body>
-  Don't be a degen. <br /><br />
+  <h2>Don't be a degen.</h2> <br /><br />
 
-<!-- <input id="date" name="date">
+  <ul class="sessions">
+  <% for(var i=0; i<sessions.length; i++) {%>
+    <li class="Poker-Session">
+      <span><%= sessions[i].date %></span>
+      <span><%= sessions[i].stakes %></span>
+      <span><%= sessions[i].netProfit %></span>
+      <span><%= sessions[i].casino %></span>
+    </li>
+  <% } %>
+</ul>
 
-<script type="text/javascript">
-  document.getElementById('date').value = Date();
-</script> -->
-
-  <form action="/sessions" method="POST">
+<form action="/sessions" method="POST">
 
   	<input id="date" name="date">
 

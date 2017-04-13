@@ -21,12 +21,15 @@ MongoClient.connect('mongodb://'+env.username+':'+env.password+'@ds047146.mlab.c
 })
 
 app.get('/', function (req, res) {
-	var cursor = db.collection('poker-sessions').find().toArray(function(err, results) {
-		console.log(results);
+	var cursor = db.collection('poker-sessions').find().toArray(function(err, result) {
+		if(err) return console.log(err)
+
+		//render index.ejs
+		res.render('index.ejs', {sessions: result})
 	})
 })
 
-app.post('/sessionAdd', (req, res) => {
+app.post('/sessions', (req, res) => {
 	console.log('You fookin degen');
 	console.log(req.body);
 
